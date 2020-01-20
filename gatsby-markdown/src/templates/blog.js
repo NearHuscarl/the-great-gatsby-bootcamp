@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
+import Head from '../components/head'
 
 export const query = graphql`
   query($slug: String!) {
@@ -20,6 +21,7 @@ const Blog = props => {
 
   return (
     <Layout>
+      <Head title={title} />
       <h1>{title}</h1>
       <p>{date}</p>
       <div dangerouslySetInnerHTML={{ __html: md.html }} />

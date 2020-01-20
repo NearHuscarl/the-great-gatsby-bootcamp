@@ -3,15 +3,16 @@ import { Link } from "gatsby"
 import Layout from '../components/layout'
 import Head from '../components/head'
 
-const About = () => {
+const NotFound = () => {
   return (
     <Layout>
-      <Head title="About" />
-      <h1>About</h1>
-      <p>This is my about page</p>
-      <Link to="/contact">Contact</Link>
+      <Head title="404" />
+      <h1>Not found</h1>
+      <p>
+          <Link to='/'>Head home</Link>
+      </p>
     </Layout>
   )
 }
 
-export default About
+export default NotFound
